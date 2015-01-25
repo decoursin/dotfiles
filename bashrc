@@ -1,0 +1,46 @@
+# history
+HISTSIZE=40000
+HISTFILESIZE=80000
+
+# Paths
+export PATH=$PATH:~/Scripts
+export PATH="$PATH:${HOME}/bin"
+export PATH=$PATH:~/Typesafe
+export PATH=$PATH:~/Idea/bin
+export PATH=$PATH:~/WebStorm-139.252/bin
+
+# foodbio project | Laravel vendor/bin directory
+export PATH=$PATH:~/foodbio/vendor/bin/
+
+# composer directory
+export PATH=$PATH:~/.composer/vendor/bin/
+
+# https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+# Install npm packages globally without sudo
+NPM_PACKAGES="$HOME/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export PATH="$NPM_PACKAGES/bin:$PATH"
+
+# Automatially source file
+# Direcitons found here: https://github.com/creationix/nvm
+source ~/.nvm/nvm.sh
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath`
+# command
+unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+if [ -f ~/.bashrc_aliases ];then
+	source ~/.bashrc_aliases
+fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+####### Global Variables
+
+# Set the editor to vim for mongodb
+export EDITOR=/usr/bin/vim
+export scripts="$HOME/Scripts"
+
+###### End Global Variables

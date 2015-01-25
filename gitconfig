@@ -1,0 +1,22 @@
+[user]
+	email = ndecoursin@gmail.com
+	name = Nick
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[merge]
+	tool = gvimdiff
+[alias]
+	st = status
+	co = checkout
+	logbt = log HEAD..origin/master
+	logbetween = log HEAD..origin/master
+	count   = !git shortlog -sn
+[push]
+	default = simple
+[diff]
+	tool = gvimdiff
+[difftool]
+	prompt = false

@@ -1,0 +1,10 @@
+{
+  "vim": {
+    "keys": {
+      "continue" : "C-k"
+    }
+  },
+  "debugger": {
+	"port": 5857
+  }
+}

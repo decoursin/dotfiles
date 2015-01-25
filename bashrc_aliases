@@ -1,0 +1,68 @@
+myapp="foodbio"
+
+# cd
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+
+# list
+alias la='ls -A'
+alias lrt='ls -lrta'
+
+# Vim
+alias ,myvimrc="vim $HOME/.vimrc"
+alias ,vimrc="vim $HOME/.vimrc"
+alias cdvim="cd $HOME/.vim"
+alias sv='$scripts/sudovim'
+
+alias cdw='cd /var/www'
+# cd to application
+alias cda='cd ~/$myapp'
+alias cds='cd $scripts'
+alias cdh='cd ~/'
+alias cdcompass="cd /var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets"
+alias cdsc="cd ~/workspace/example/"
+# cd to eclipse
+alias cde="cd ~/workspace/"
+# Trash folder
+alias cdt='cd /home/nick/.local/share/Trash/files'
+# Tic-Tac-Toe game
+alias cdtic='cd /home/nick/Working/tic-tac-toe'
+# C programing language directory
+alias cdc='cd /home/nick/Working/c_programming'
+# C++ programing language directory
+alias cdcpp='cd /home/nick/Working/cpp'
+
+# reads manpage without installing package
+# $1 is package
+# $2 is manpage name in package
+alias dman='debman -p $1 $2'
+
+# foodbio
+alias vimroute='vim ~/$myapp/app/routes.php'
+alias cdl='cd ~/Working/Laravel5'
+
+# trash
+alias rm=trash
+
+# comma quick open
+alias ,alias="vim $HOME/.bashrc_aliases"
+alias ,bashrc="vim $HOME/.bashrc"
+
+# Copy use: echo 'copy to my clipboard' | pbcopy
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+# tmux attach
+alias ,ta='tmux attach'
+# tmux start
+alias ,t='tmux'
+
+# doctrine
+alias clearcache='doctrine orm:clear-cache:metadata && doctrine orm:clear-cache:query && doctrine orm:clear-cache:result'
+
+# alias is now an executable
+# find
+# $1 is directory
+# $2 is search name
+#alias findn="find $1 -iname $2 -print 2>/dev/null"

@@ -19,8 +19,11 @@ make_symlinks() {
 		continue
 	fi
 	echo    # (optional) move to a new line
-	echo "Moving '$home_file' to '$old_dotfiles/$filename'"
-	mv -T "$home_file" "${old_dotfiles}/${filename}"
+	if [[ -f ${home_file} ]]; then
+		echo "Moving '$home_file' to '$old_dotfiles/$filename'"
+		# Treat directory like file. Don't overwrite exisiting file.
+		mv -T -n "$home_file" "${old_dotfiles}/${filename}"
+	fi
 	echo -e "Creating symlink from '$src' to '$home_file' \n"
 	ln -s "$src" "$home_file"
 }
@@ -31,6 +34,10 @@ make_symlinks() {
 if [[ ! -d ${dir} && ${#files[@]} -eq 0 ]]; then
 	echo "Tbe ${dir} directory does not exist yet or it's empty. Please clone it first."
 fi
+
+env -i git submodule init
+env -i git submodule update
+
 
 # Create a ~/dotfiles_old directory
 if [[ ! -d ${old_dotfiles} ]]; then

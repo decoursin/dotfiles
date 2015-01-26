@@ -1,0 +1,21 @@
+[submodule "vim/bundle/node"]
+	path = vim/bundle/node
+	url = https://github.com/moll/vim-node
+[submodule "vim/bundle/powerline-fonts"]
+	path = vim/bundle/powerline-fonts
+	url = https://github.com/powerline/fonts
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/vim-backbone"]
+	path = vim/bundle/vim-backbone
+	url = https://github.com/mklabs/vim-backbone.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/not_working/ack.vim"]
+	path = vim/not_working/ack.vim
+	url = https://github.com/mileszs/ack.vim

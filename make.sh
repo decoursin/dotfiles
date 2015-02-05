@@ -53,7 +53,7 @@ fi
 for src in "${files[@]}"; do
 	filename="$(basename "$src")"
 	home_file="$HOME/.${filename}"
-	if [[ -f "$src" || -d "$src" ]] && [ "$filename" != "$(basename "$0")" ]; then
+	if [[ -f "$src" || -d "$src" ]] && [ "$filename" != "$(basename "$0")" ] && [  "$filename" != "excludes" ]; then
 		make_symlinks
 	fi
 done

@@ -86,6 +86,15 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 map <leader>sh :sh<cr>
 " Run php on the current file.
 "map <leader>p :!php %<cr>
+" a.vim. Switch between header file and c/c++ file
+map <leader>a :A<cr>
+
+" scp to school computer current file
+map <leader>scp :!scp <c-r>=expand("%:p")<cr> deco0072@remote06.cselabs.umn.edu:~/
+
+" Git
+" Git difftool current file
+map <leader>gd :!git difftool HEAD^ <c-r>=expand("%:p")<cr>
 
 " diff this
 " Windows
@@ -124,9 +133,9 @@ set laststatus=2
 cmap w!! w !sudo tee > /dev/null %<CR>
 
 " Set backups directions
-set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+"set backup
+"set backupdir=~/.vim/backup
+"set directory=~/.vim/tmp
 
 " This only works on Linux
 " Suppose to automatically reload .vimrc files when edited
@@ -216,6 +225,8 @@ map <F6> :SyntasticToggleMode<CR>
     let g:syntastic_check_on_wq = 0
     let g:syntastic_enable_highlighting = 1
 	let g:syntastic_javascript_checkers = ['jsxhint']
+	" C++ syntax check the latest version stuff like C++11
+	let g:syntastic_cpp_compiler_options = 'std=c++0x'
 	
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -292,12 +303,17 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Specific vimdiff configurations
 func DiffSetup()
   " Make a full screen top-level-window with all sub-window equal-size
   " winpos 0 25
   winpos 0 0
   " winpos 0 35
 
+
+  " up down next diff
+  nmap <F5> ]c
+  nmap <F6> [c
   " Big work monitor size
   " set columns=195
   " set lines=70
@@ -330,46 +346,17 @@ func DiffSetup()
   " I don't know what this does
   nmap s :set diffopt=filler,iwhite<CR>
 
-  " disable folding -- I think it's one of those cool ideas that doesn't
-  " work so well in practice. :-(
-  "set nofoldenable foldcolumn=0
-  "wincmd b
-  "set nofoldenable foldcolumn=0
-
-  " find the only non empty non-perforce filetype, if there is one
-  let wincount = winnr()
-  let ft = ''
-  let ok = 1
-  let w = 1
-  while ok && w <= wincount
-    if getwinvar(w, '&diff')
-      e!
-      let bft = getbufvar(winbufnr(w), '&filetype')
-      if bft != '' && bft != 'perforce'
-        if ft != ''
-          if ft != bft
-            let ok = 0
-          endif
-        else
-          let ft = bft
-        endif
-      endif
-    endif
-    let w = w + 1
-  endwhile
-
   " set all diff windows to use the one true filetype, if we found one
-  if ok && ft != ''
-    let w = 1
-    while w <= wincount
-      if getwinvar(w, '&diff')
-        call setbufvar(winbufnr(w), '&filetype', ft)
-      endif
-      let w = w + 1
-    endwhile
-  endif
+"  if ok && ft != ''
+"    let w = 1
+"    while w <= wincount
+"      if getwinvar(w, '&diff')
+"        call setbufvar(winbufnr(w), '&filetype', ft)
+"      endif
+"      let w = w + 1
+"    endwhile
+"  endif
   syntax on
-  1
 
   set mousehide                " Turn off mouse when typing
   set guioptions+=T            " Add toolbar
@@ -377,6 +364,12 @@ func DiffSetup()
   set guioptions-=r            " Remove right hand scrollbar
   set guioptions-=L            " Remove left-hand scrollbar (for v-split)
   set visualbell t_vb=         " Turn off flashing (needs to be in gvimrc too)
+
+  " Change the color of the cursor in diff mode
+  " http://stackoverflow.com/questions/6158860/change-color-of-cursor-in-vim
+" highlight Cursor guibg=yellow
+" au * hi Cursor guibg=yellow
+
 " This guicursor stuff below needs to be set in .gvimrc.
 " Configure the cursor: http://vim.wikia.com/wiki/Configuring_the_cursor
 " highlight Cursor guifg=white guibg=black

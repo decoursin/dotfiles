@@ -88,6 +88,9 @@ map <leader>sh :sh<cr>
 "map <leader>p :!php %<cr>
 " a.vim. Switch between header file and c/c++ file
 map <leader>a :A<cr>
+" put/print the full path name of the current file
+"http://vim.wikia.com/wiki/Get_the_name_of_the_current_file
+map <leader>p :put =expand('%:p')<cr>
 
 " scp to school computer current file
 map <leader>scp :!scp <c-r>=expand("%:p")<cr> deco0072@remote06.cselabs.umn.edu:~/
@@ -244,6 +247,8 @@ if v:progname =~? "evim"
   finish
 endif
 
+set noswapfile
+set nobackup
 "if has("vms")
 " set nobackup		" do not keep a backup file, use versions instead
 " else

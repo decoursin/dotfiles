@@ -95,6 +95,12 @@ map <leader>p :put =expand('%:p')<cr>
 " scp to school computer current file
 map <leader>scp :!scp <c-r>=expand("%:p")<cr> deco0072@remote06.cselabs.umn.edu:~/
 
+
+" format the entire file
+" gg goes to the top of the file; = fixes the indentation; G performs
+" the operation to the end of the file.
+map <leader>ff gg=G
+
 " Git
 " Git difftool current file
 map <leader>gd :!git difftool HEAD^ <c-r>=expand("%:p")<cr>

@@ -20,3 +20,5 @@
 	tool = gvimdiff
 [difftool]
 	prompt = false
+[color]
+	ui = auto

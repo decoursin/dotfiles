@@ -1,0 +1,9 @@
+" Copied from this link
+" https://gist.github.com/RobertAudi/11ffa90f4952e5923ce7
+nnoremap yy "+yy
+vnoremap y "+y
+ 
+nnoremap p "+p
+vnoremap p "+p
+nnoremap P "+P
+vnoremap P "+P

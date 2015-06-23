@@ -1,9 +1,4 @@
 " Copied from this link
+" http://stackoverflow.com/questions/27898407/intellij-idea-with-ideavim-cannot-copy-text-from-another-source
 " https://gist.github.com/RobertAudi/11ffa90f4952e5923ce7
-nnoremap yy "+yy
-vnoremap y "+y
- 
-nnoremap p "+p
-vnoremap p "+p
-nnoremap P "+P
-vnoremap P "+P
+set clipboard+=unnamed

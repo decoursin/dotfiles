@@ -18,6 +18,7 @@
 	default = simple
 [diff]
 	tool = gvimdiff
+	guitool = meld
 [difftool]
 	prompt = false
 [color]

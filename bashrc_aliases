@@ -18,8 +18,6 @@ alias sv="$scripts/sudovim"
 alias cdw="cd /var/www"
 # cd to application
 alias cds="cd $scripts"
-# cd to eclipse
-alias cde="cd ~/workspace/"
 # Trash folder
 alias cdt="cd $HOME/.local/share/Trash/files"
 # C programing language directory
@@ -44,6 +42,19 @@ fi
 alias ,alias="vim $HOME/.bashrc_aliases"
 alias ,bashrc="vim $HOME/.bashrc"
 
-# Copy use: echo "copy to my clipboard" | pbcopy
+# Copy use: echo 'copy to my clipboard' | pbcopy
 alias pbcopy="xsel --clipboard --input"
 alias pbpaste="xsel --clipboard --output"
+
+# node
+alias cdn="cd ~/Working/node/"
+alias cdnode="cd ~/Working/node/"
+# nodeschool
+alias cdns="cd ~/Working/node/nodeschool"
+# working
+alias cdW="cd ~/Working/"
+# R
+alias cdR="cd ~/Working/R/"
+alias cdr="cd ~/Working/R/"
+# dotfile
+alias cd.="cd ~/dotfiles"

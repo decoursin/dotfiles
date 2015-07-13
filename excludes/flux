@@ -4,7 +4,7 @@
 #sudo apt-get install fluxgui
 
 # then run this command
-xflux -l 90 -g 0 -k 2700
+xflux -l 90 -g 0 -k 2000
 
 # last add it to a cronjob
 # help http://superuser.com/questions/685471/how-can-i-run-a-command-after-boot

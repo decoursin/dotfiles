@@ -1,0 +1,4 @@
+#!/bin/bash
+# This shows free RAM in MB
+
+free -m | grep cache | awk '/[0-9]/{ print $4" MB" }'

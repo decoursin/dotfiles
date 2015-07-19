@@ -1,0 +1,7 @@
+#http://askubuntu.com/questions/305229/whats-the-best-way-to-ssh-to-machines-on-the-local-network
+
+#To get a list of Ubuntu workstations in the local network, then you can connect to them by running:
+avahi-browse -tl _workstation._tcp
+
+## to connect to a local network
+#ssh <username>@<computer-name>.local

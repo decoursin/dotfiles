@@ -1,0 +1,2 @@
+#! /bin/bash
+find $1 -not -path "*/Copy/*" -iname $2 -print 2>/dev/null

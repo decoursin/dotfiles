@@ -34,6 +34,10 @@ if [ -f ~/.bashrc_aliases ];then
 	source ~/.bashrc_aliases
 fi
 
+# Must install bash-completion first: apt-get install bash-completion
+# https://github.com/szermatt/emacs-bash-completion
+source /etc/bash_completion
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

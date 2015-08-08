@@ -233,7 +233,7 @@ map <F6> :SyntasticToggleMode<CR>
 " If you want to skip these checks when you issue |:wq|, |:x|, and |:ZZ|, set this variable to 0. 
     let g:syntastic_check_on_wq = 0
     let g:syntastic_enable_highlighting = 1
-	let g:syntastic_javascript_checkers = ['jsxhint']
+	let g:syntastic_javascript_checkers = ['eslint']
 	" C++ syntax check the latest version stuff like C++11
 	let g:syntastic_cpp_compiler_options = 'std=c++0x'
 	

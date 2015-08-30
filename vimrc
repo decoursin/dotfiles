@@ -131,7 +131,6 @@ map <leader>dt :!gvimdiff % <c-r>=expand("%:p:h")<cr>/
 map <leader>ne :r ~/Scripts/express_server<cr>
 "go to file in new tab
 nmap gt <C-w>gf
-nmap gf <C-w>gf
 " tabfind only useful when finding one file of the given name
 " it searchs the subdirectories for the first file with the given name
 map <leader>f :tabfind

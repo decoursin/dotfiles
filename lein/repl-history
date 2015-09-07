@@ -1,0 +1,43 @@
+exit
+(println clojure-version)
+(clojure-version)
+exit
+(class first)
+(first [3 4])
+(def first "hii")
+(require '[clojure.math :as math])
+(require '[clojure.math.numeric-tower :as math])
+(require '[clojure.string :as string])
+(require '[clojure.string :as str
+           clojure.math.numeric-tower :as math])
+(require '[clojure.string :as str
+           clojure.math.numeric-tower :as math])
+(require '[clojure.string :as str
+           clojure.math.numeric-tower :as math])
+(require '[clojure.math.numeric-tower :as math])
+(clojure-version)
+(require '[clojure.math])_
+(require '[clojure.math])
+(require '[clojure.contrib.math])
+(ns-map *ns*)
+(ns-interns *ns*)
+(ns-refers *ns*)
+(ns-imports *ns*)
+(require '[clojure.set :as cs]) 
+(require '[clojure.math.numeric-tower :as math])
+exit
+(require '[clojure.math.numeric-tower :as math])
+(clojure.math.numeric-tower/expt 2 3) ;=> 8
+(Math/pow 2 3) ;=> 8.0
+exit
+(clojure.math.numeric-tower/expt 2 3) ;=> 8
+(require '[clojure.math.numeric-tower :as math])
+(math/sqrt 2)
+(math/sqrt 4)
+(class (math/sqrt 4))
+(math/exact-integer-sqrt 4)
+(math/exact-integer-sqrt 4.1)
+(math/exact-integer-sqrt 5)
+(second [3 4])
+(map #(Integer. %) (clojure.string/split "3,5,4,5" #",")
+)

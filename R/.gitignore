@@ -1,1 +1,3 @@
-library/
+# Ignore all files in library/, except .gitkeep.
+library/*
+!library/.gitkeep

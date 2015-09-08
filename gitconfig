@@ -11,6 +11,7 @@
 [alias]
 	st = status
 	co = checkout
+	g = grep
 	logbt = log HEAD..origin/master
 	logbetween = log HEAD..origin/master
 	count   = !git shortlog -sn

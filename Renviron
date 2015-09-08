@@ -1,3 +1,3 @@
 #Individual users can install R packages into their home directory. The simplest procedure is to create a file ~/.Renviron containing, e.g.,
 
-R_LIBS_USER="~/lib/R/library"
+R_LIBS_USER="~/R/library"

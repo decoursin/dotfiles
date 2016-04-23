@@ -32,6 +32,19 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 if [ -f ~/.bashrc_aliases ];then
 	source ~/.bashrc_aliases
+	# Emacs
+	# copies all bashrc_aliases to eshell/alias file.
+	# must come after loading the aliases
+	# copied from here: http://www.emacswiki.org/emacs/EshellAlias
+    alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias 
+fi
+
+## Go lang
+if [ -d "$HOME/go" ] ; then
+	export GOPATH="$HOME/go"
+fi
+if [ -d "$HOME/go/bin" ] ; then
+	PATH="$HOME/go/bin:$PATH"
 fi
 
 # Must install bash-completion first: apt-get install bash-completion
@@ -46,5 +59,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Set the editor to vim for mongodb
 export EDITOR=/usr/bin/vim
 export scripts="$HOME/Scripts"
+# Emacs
+export EMACS_HOME="$HOME/.emacs.d/"
 
 ###### End Global Variables

@@ -21,7 +21,7 @@ alias cds="cd $scripts"
 # Trash folder
 alias cdt="cd $HOME/.local/share/Trash/files"
 # C programing language directory
-alias cdc="cd $HOME/Working/c_programming"
+alias cdc="cd $HOME/Working/c_programming/"
 # C++ programing language directory
 alias cdcpp="cd $HOME/Working/cpp"
 
@@ -58,3 +58,11 @@ alias cdR="cd ~/Working/R/"
 alias cdr="cd ~/Working/R/"
 # dotfile
 alias cd.="cd ~/dotfiles"
+# clojure
+alias cdclj="cd ~/Working/clojure/"
+alias cdcljs="cd ~/Working/clojurescript/"
+alias cdclojure="cd ~/Working/clojure/"
+# emacs
+alias cdem="cd $HOME/.emacs.d/"
+alias cdeml="cd $HOME/.emacs.d/lisp/"
+alias em="emacs"

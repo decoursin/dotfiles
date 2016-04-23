@@ -14,7 +14,8 @@
 	g = grep
 	logbt = log HEAD..origin/master
 	logbetween = log HEAD..origin/master
-	count   = !git shortlog -sn
+	count = !git shortlog -sn
+	pretty = log --graph --oneline --all --decorate
 [push]
 	default = simple
 [diff]

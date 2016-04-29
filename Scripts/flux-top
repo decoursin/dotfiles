@@ -1,0 +1,13 @@
+# first install flux
+#sudo add-apt-repository ppa:kilian/f.lux
+#sudo apt-get update
+#sudo apt-get install fluxgui
+
+# then run this command
+xflux -l 1 -g 179 -k 2000
+
+# last add it to a cronjob
+# help http://superuser.com/questions/685471/how-can-i-run-a-command-after-boot
+# $sudo crontab -e
+# $@reboot /home/nick/dotfiles/excludes/flux # aka this file
+# $chmod 755 /home/nick/dotfiles/excludes/flux

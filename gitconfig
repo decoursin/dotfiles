@@ -1,6 +1,6 @@
 [user]
-	email = ndecoursin@gmail.com
-	name = Nick
+	#email = ndecoursin@gmail.com
+	name = decoursin
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim

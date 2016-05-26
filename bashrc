@@ -61,12 +61,14 @@ export scripts="$HOME/Scripts"
 # Emacs
 export EMACS_HOME="$HOME/.emacs.d/"
 
+# Java
+export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
 ###### End Global Variables
 
 ###### Valsight
 
 export PATH="~/bin/Sencha/Cmd/5.1.3.61:$PATH"
-export SENCHA_CMD_3_0_0="~/bin/Sencha/Cmd/5.1.3.61"
+export SENCHA_CMD_3_0_0="/home/nick/bin/Sencha/Cmd/5.1.3.61"
 
 ##### End Valsight
-

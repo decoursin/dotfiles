@@ -15,15 +15,14 @@ export PATH=$PATH:~/foodbio/vendor/bin/
 # composer directory
 export PATH=$PATH:~/.composer/vendor/bin/
 
+## Node
 # https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 # Install npm packages globally without sudo
 NPM_PACKAGES="$HOME/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
-# Automatially source file
-# Direcitons found here: https://github.com/creationix/nvm
-source ~/.nvm/nvm.sh
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
@@ -63,7 +62,11 @@ export scripts="$HOME/Scripts"
 export EMACS_HOME="$HOME/.emacs.d/"
 
 ###### End Global Variables
+
 ###### Valsight
 
 export PATH="~/bin/Sencha/Cmd/5.1.3.61:$PATH"
 export SENCHA_CMD_3_0_0="~/bin/Sencha/Cmd/5.1.3.61"
+
+##### End Valsight
+

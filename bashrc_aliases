@@ -55,7 +55,7 @@ alias cdns="cd ~/Working/node/nodeschool"
 alias cdW="cd ~/Working/"
 # R
 alias cdR="cd ~/Working/R/"
-alias cdr="cd ~/Working/R/"
+#alias cdr="cd ~/Working/R/"
 # dotfile
 alias cd.="cd ~/dotfiles"
 # clojure
@@ -66,3 +66,9 @@ alias cdclojure="cd ~/Working/clojure/"
 alias cdem="cd $HOME/.emacs.d/"
 alias cdeml="cd $HOME/.emacs.d/lisp/"
 alias em="emacs"
+# Valsight
+alias cdui="cd $HOME/valsight/enterprise-simulator/simulator-ui"
+alias cdr="cd $HOME/valsight/enterprise-simulator/rest-service"
+alias cddl="cd $HOME/valsight/enterprise-simulator/data-loader"
+alias cdes="cd $HOME/valsight/enterprise-simulator/"
+alias cdval="cd $HOME/valsight/"

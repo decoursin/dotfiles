@@ -63,3 +63,7 @@ export scripts="$HOME/Scripts"
 export EMACS_HOME="$HOME/.emacs.d/"
 
 ###### End Global Variables
+###### Valsight
+
+export PATH="~/bin/Sencha/Cmd/5.1.3.61:$PATH"
+export SENCHA_CMD_3_0_0="~/bin/Sencha/Cmd/5.1.3.61"

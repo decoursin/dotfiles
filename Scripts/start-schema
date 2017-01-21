@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sudo schema-registry-start /etc/schema-registry/schema-registry.properties

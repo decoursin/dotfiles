@@ -1,0 +1,11 @@
+#! /bin/bash
+
+sudo kafka-avro-console-consumer --bootstrap-server localhost:9092 \
+                            --from-beginning \
+                            $@
+
+##                         --formatter kakfa.tools.DefaultMessageFormatter \
+##							--property print.key=true \
+##							--property print.value=true \
+##							--property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
+##							--property value.deserializer=org.apache.kafka.common.serialization.StringDeserializer \

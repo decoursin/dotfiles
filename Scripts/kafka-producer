@@ -1,0 +1,5 @@
+#! /bin/bash
+
+sudo kafka-avro-console-producer --broker-list localhost:2181 \
+                                 --property value.schema='{"type":"record","name":"Command","namespace":"com.foodpanda.avro","fields":[{"name":"id","type":"string"},{"name":"action","type":"string"},{"name":"data","type":{"type":"record","name":"VehicleLocation","fields":[{"name": "id","type":"string"},{"name":"vehicleId","type":"long"},{"name":"geoCoordinate","type":{"type":"record","name":"GeoCoordinate","fields":[{"name":"lat","type":"double"},{"name":"lon","type":"double"}]}},{"name":"batteryLevel","type":"int"},{"name":"speedInKmh","type":"double"},{"name":"accuracyInMeters","type":"double"},{"name":"dateTime","type":"string"},{"name":"vehicleDetectedActivity","type":{"type":"enum","name":"VehicleDetectedActivity","symbols":["IN_VEHICLE","ON_BICYCLE","ON_FOOT","RUNNING","STILL","TILTING","UNKNOWN","WALKING"]}}]}}]}' \
+                       $@

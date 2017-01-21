@@ -1,0 +1,21 @@
+
+
+If you want to remove schemas
+
+1) update server.properties to enable topic deletion.
+
+2) kill schema register server.
+
+3) delete topics (must I delete all of them?)
+sudo kafka-topics --zookeeper localhost:2181 --delete --topic event
+sudo kafka-topics --zookeeper localhost:2181 --delete --topic _schemas
+sudo kafka-topics --zookeeper localhost:2181 --delete --topic command
+sudo kafka-topics --zookeeper localhost:2181 --delete --topic vehicle-location
+
+4) delete generated java files 
+- I'm not sure if this step is needed.
+
+5) mvn generate-sources
+- I'm not sure if this step is needed.
+
+6) start stream server, run even generator.

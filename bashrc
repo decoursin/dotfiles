@@ -65,10 +65,3 @@ export EMACS_HOME="$HOME/.emacs.d/"
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 
 ###### End Global Variables
-
-###### Valsight
-
-export PATH="~/bin/Sencha/Cmd/5.1.3.61:$PATH"
-export SENCHA_CMD_3_0_0="/home/nick/bin/Sencha/Cmd/5.1.3.61"
-
-##### End Valsight

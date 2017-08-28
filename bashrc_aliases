@@ -15,7 +15,6 @@ alias ,vimrc="vim $HOME/.vimrc"
 alias cdvim="cd $HOME/.vim"
 alias sv="$scripts/sudovim"
 
-alias cdw="cd /var/www"
 # cd to application
 alias cds="cd $scripts"
 # Trash folder
@@ -49,13 +48,10 @@ alias pbpaste="xsel --clipboard --output"
 # node
 alias cdn="cd ~/Working/node/"
 alias cdnode="cd ~/Working/node/"
-# nodeschool
-alias cdns="cd ~/Working/node/nodeschool"
 # working
 alias cdW="cd ~/Working/"
 # R
 alias cdR="cd ~/Working/R/"
-#alias cdr="cd ~/Working/R/"
 # dotfile
 alias cd.="cd ~/dotfiles"
 # clojure
@@ -66,9 +62,3 @@ alias cdclojure="cd ~/Working/clojure/"
 alias cdem="cd $HOME/.emacs.d/"
 alias cdeml="cd $HOME/.emacs.d/lisp/"
 alias em="emacs"
-# Valsight
-alias cdui="cd $HOME/valsight/enterprise-simulator/simulator-ui"
-alias cdr="cd $HOME/valsight/enterprise-simulator/rest-service"
-alias cddl="cd $HOME/valsight/enterprise-simulator/data-loader"
-alias cdes="cd $HOME/valsight/enterprise-simulator/"
-alias cdval="cd $HOME/valsight/"

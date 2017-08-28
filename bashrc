@@ -5,15 +5,11 @@ HISTFILESIZE=80000
 # Paths
 export PATH=$PATH:~/Scripts
 export PATH="$PATH:${HOME}/bin"
-export PATH=$PATH:~/Typesafe
-export PATH=$PATH:~/Idea/bin
-export PATH=$PATH:~/WebStorm-139.252/bin
-
-# foodbio project | Laravel vendor/bin directory
-export PATH=$PATH:~/foodbio/vendor/bin/
-
-# composer directory
 export PATH=$PATH:~/.composer/vendor/bin/
+
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 ## Node
 # https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
@@ -46,6 +42,9 @@ if [ -d "$HOME/go/bin" ] ; then
 	PATH="$HOME/go/bin:$PATH"
 fi
 
+## Ocaml
+. /home/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
 # Must install bash-completion first: apt-get install bash-completion
 # https://github.com/szermatt/emacs-bash-completion
 source /etc/bash_completion
@@ -63,5 +62,8 @@ export EMACS_HOME="$HOME/.emacs.d/"
 
 # Java
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
+## aws bash autocompletion
+complete -C '/usr/local/bin/aws_completer' aws
 
 ###### End Global Variables

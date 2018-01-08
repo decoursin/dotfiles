@@ -1,0 +1,5 @@
+#!/bin/bash
+
+## to run this file: . minikube-docker
+
+eval $(minikube docker-env)

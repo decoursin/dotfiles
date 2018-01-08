@@ -45,8 +45,10 @@ fi
 # Must install bash-completion first: apt-get install bash-completion
 # https://github.com/szermatt/emacs-bash-completion
 source /etc/bash_completion
+###### kubernetes
+source <(kubectl completion bash)
 
-### Added by the Heroku Toolbelt
+##### Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ####### Global Variables

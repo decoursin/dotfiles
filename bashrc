@@ -27,10 +27,13 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 if [ -f ~/.bashrc_aliases ];then
 	source ~/.bashrc_aliases
-	# Emacs
-	# copies all bashrc_aliases to eshell/alias file.
-	# must come after loading the aliases
-	# copied from here: http://www.emacswiki.org/emacs/EshellAlias
+fi
+
+# Emacs
+# copies all bashrc_aliases to eshell/alias file.
+# must come after loading the aliases
+# copied from here: http://www.emacswiki.org/emacs/EshellAlias
+if [ -f ~/.emacs.d/eshell/alias ];then
     alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias 
 fi
 

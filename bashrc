@@ -58,7 +58,7 @@ export scripts="$HOME/Scripts"
 export EMACS_HOME="$HOME/.emacs.d/"
 
 # Java
-export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 ## aws bash autocompletion
 complete -C '/usr/local/bin/aws_completer' aws

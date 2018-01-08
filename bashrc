@@ -35,11 +35,8 @@ if [ -f ~/.bashrc_aliases ];then
 fi
 
 ## Go lang
-if [ -d "$HOME/go" ] ; then
-	export GOPATH="$HOME/go"
-fi
-if [ -d "$HOME/go/bin" ] ; then
-	PATH="$HOME/go/bin:$PATH"
+if [ -d "/usr/local/go" ] ; then
+    export PATH="$PATH:/usr/local/go/bin"
 fi
 
 ## Ocaml

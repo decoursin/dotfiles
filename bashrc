@@ -58,6 +58,9 @@ source <(kubectl completion bash)
 ##### Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
 
+##### aws bash autocompletion
+complete -C '/home/nick/.local/bin/aws_completer' aws
+
 ####### Global Variables
 
 # Set the editor to vim for mongodb
@@ -68,8 +71,5 @@ export EMACS_HOME="$HOME/.emacs.d/"
 
 # Java
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-
-## aws bash autocompletion
-complete -C '/usr/local/bin/aws_completer' aws
 
 ###### End Global Variables

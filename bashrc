@@ -39,7 +39,12 @@ fi
 
 ## Go lang
 if [ -d "/usr/local/go" ] ; then
-    export PATH="$PATH:/usr/local/go/bin"
+    # GOROOT is for the executable
+    export GOROOT="/usr/local/go"
+    export PATH="$PATH:$GOROOT/bin"
+    # GOPATH is for the src code
+    export GOPATH="$HOME/go"
+    export PATH="$PATH:$GOPATH/bin"
 fi
 
 ## Ocaml

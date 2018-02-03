@@ -81,3 +81,5 @@ export EMACS_HOME="$HOME/.emacs.d/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 ###### End Global Variables
+
+minikube docker-env 2> /dev/null && eval $(minikube docker-env)

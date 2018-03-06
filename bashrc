@@ -68,6 +68,12 @@ if [ -x "$(command -v helm)" ]; then
   source <(helm completion bash)
 fi
 
+###### Google cloud
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/nick/google-cloud-sdk/path.bash.inc' ]; then source '/home/nick/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/nick/google-cloud-sdk/completion.bash.inc' ]; then source '/home/nick/google-cloud-sdk/completion.bash.inc'; fi
 
 ##### Heroku
 export PATH="/usr/local/heroku/bin:$PATH"

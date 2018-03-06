@@ -62,6 +62,12 @@ fi
 
 ###### kubernetes
 source <(kubectl completion bash)
+minikube docker-env 2> /dev/null && eval $(minikube docker-env)
+export DOCKER_HOST_IP=$(echo "$DOCKER_HOST" | sed 's/tcp:\/\///' | sed 's/:.*//g')
+if [ -x "$(command -v helm)" ]; then
+  source <(helm completion bash)
+fi
+
 
 ##### Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -82,4 +88,3 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 ###### End Global Variables
 
-minikube docker-env 2> /dev/null && eval $(minikube docker-env)

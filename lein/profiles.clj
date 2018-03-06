@@ -35,7 +35,7 @@
                   [lein-deps-tree "0.1.2"] ;to run: lein deps-tree
                   ;;t0Do: read the docs of this still tho.
                   ;;http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded
-                  [refactor-nrepl "2.2.0-SNAPSHOT"]
+                  [refactor-nrepl "2.4.0-SNAPSHOT"]
                   ;;;; NEW
                   [com.jakemccrary/lein-test-refresh "0.12.0"] ;; automatica when new changes.
                   [lein-kibit "0.1.2"] ;; suggests code to be rewritten to be more idiomatic

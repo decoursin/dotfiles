@@ -1,0 +1,29 @@
+#! /bin/bash
+
+VBoxManage list runningvms | awk '{print $2}'  | xargs --no-run-if-empty -t -n1 -IXXX VBoxManage controlvm XXX poweroff
+VBoxManage list vms | awk '{print $2}'  | xargs --no-run-if-empty -t -n1 VBoxManage unregistervm
+killall -9 VBoxHeadless
+rm -rf ~/Virtualbox\ VMs/*
+mv /home/nick/.minikube ~/Bak/minikube.bak4
+### can i skip this?
+mv /home/nick/.kube ~/Bak/kube.bak4
+
+## then
+./minikube-start
+minikube addons enable ingress
+eval $(minikube docker-env)
+##fix /etc/hosts with correct $(minikube ip)
+## use sed?
+##-- 192.168.99.100 api.example cameras.example tiles.example grafana.example web.example
+shopt -s expand_aliases
+source /home/nick/.bashrc_aliases
+cdch; helm init
+cdc; make -j8 all &
+cdsw; make &
+cdweb; make &
+wait
+
+## then
+helminstall-dev
+./camera_dev.db.sh
+echo $(minikube ip)

@@ -1,0 +1,16 @@
+#! /bin/sh
+
+#/home/nick/bin/minikube start
+##minikube start \
+##--loglevel=0 \
+##--logtostderr \
+
+##--node-ip=192.168.99.101 --generate-certs=false
+##--vm-driver=none
+#
+#
+##helm init --kube-context=minikube
+minikube start --disk-size=80g \
+	--loglevel=0 \
+	--logtostderr \
+	--memory=6144

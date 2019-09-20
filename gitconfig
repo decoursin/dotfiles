@@ -16,8 +16,10 @@
 	logbetween = log HEAD..origin/master
 	count = !git shortlog -sn
 	pretty = log --graph --oneline --all --decorate
+	lg = log --date=short --pretty=format:"%C(124)%ad %C(24)%h %C(34)%an %C(252)%s%C(178)%d"
 [push]
 	default = simple
+	followTags = true
 [diff]
 	tool = gvimdiff
 	guitool = meld

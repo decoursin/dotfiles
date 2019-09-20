@@ -1,0 +1,10 @@
+https://gist.github.com/hgomez/9650687
+
+
+this one worked for me:
+
+curl -L -b "oraclelicense=a" -O https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz
+
+one of them said: 
+replace "2f38c3b165be4555a1fa6e98c45e0808" with correct string from JDK download page if above script returns 404 error.
+

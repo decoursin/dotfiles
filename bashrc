@@ -1,3 +1,6 @@
+## The order of expansions is:
+## brace expansion, tilde expansion, parameter, variable and arithmetic expansion and command substitution (done in a left-to-right fashion), word splitting, and pathname expansion.
+
 # history
 HISTSIZE=40000
 HISTFILESIZE=80000
@@ -6,7 +9,9 @@ HISTFILESIZE=80000
 export PATH=$PATH:~/Scripts
 export PATH="$PATH:${HOME}/bin"
 export PATH=$PATH:~/.composer/vendor/bin/
-
+export PATH="$PATH:${HOME}/racket/bin"
+export PATH="$PATH:${HOME}/.ghcup/bin/"
+export PATH="$PATH:${HOME}/.cabal/bin/"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -149,3 +154,4 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

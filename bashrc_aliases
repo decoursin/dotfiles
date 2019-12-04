@@ -1,5 +1,3 @@
-myapp="foodbio"
-
 # cd
 alias ..="cd ../"
 alias ...="cd ../../"

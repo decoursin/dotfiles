@@ -45,7 +45,6 @@ alias cdnode="cd ~/Working/node/"
 alias cdW="cd ~/Working/"
 # scripts
 alias cdS="cd ~/Scripts/"
-alias cds="cd ~/Scripts/"
 # R
 alias cdR="cd ~/Working/R/"
 # dotfile
@@ -58,3 +57,10 @@ alias cdclojure="cd ~/Working/clojure/"
 alias cdem="cd $HOME/.emacs.d/"
 alias cdeml="cd $HOME/.emacs.d/lisp/"
 alias em="emacs"
+
+#personal computer
+alias cdch="cd $HOME/panono/charts"
+alias cdapi="cd $HOME/panono/apiserver"
+alias cdcl="cd $HOME/panono/cloud-angular"
+alias cds="cd $HOME/panono/stitcher"
+alias cdti="cd $HOME/panono/tiler"

@@ -63,7 +63,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 ############################################## end of bash coloring
 
@@ -132,19 +132,15 @@ fi
 . /home/nick/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 ###### kubernetes
-source <(kubectl completion bash)
-minikube docker-env 2> /dev/null && eval $(minikube docker-env)
+#minikube docker-env 2> /dev/null && eval $(minikube docker-env)
 export DOCKER_HOST_IP=$(echo "$DOCKER_HOST" | sed 's/tcp:\/\///' | sed 's/:.*//g')
 if [ -x "$(command -v helm)" ]; then
   source <(helm completion bash)
 fi
 
 ###### Google cloud
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/nick/google-cloud-sdk/path.bash.inc' ]; then source '/home/nick/google-cloud-sdk/path.bash.inc'; fi
-
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/nick/google-cloud-sdk/completion.bash.inc' ]; then source '/home/nick/google-cloud-sdk/completion.bash.inc'; fi
+##if [ -f '/home/nick/google-cloud-sdk/completion.bash.inc' ]; then source '/home/nick/google-cloud-sdk/completion.bash.inc'; fi
 
 ##### Heroku
 export PATH="/usr/local/heroku/bin:$PATH"
